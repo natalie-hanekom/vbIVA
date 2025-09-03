@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sound Samples</title>
+  <style>
+    .audio-grid {
+      display: flex;
+      gap: 40px;
+      align-items: center;  /* vertically align text + players */
+    }
+    .audio-item {
+      display: flex;
+      flex-direction: column; /* heading above, text + player below */
+    }
+    .label-audio {
+      display: flex;
+      gap: 10px;   /* space between words and player */
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>Dataset A</h1>
 
-  <h2>Mixtures</h2>
+<h2>Sound Examples</h2>
 
-  <h3>10 dB SNR babble noise</h3>
-  <audio controls>
-    <source src="audio/setup_A_mix_10dB_babble.wav" type="audio/wav">
-    Your browser does not support the audio element.
-  </audio>
+<div class="audio-grid">
 
-  <h3>5 dB SNR babble noise</h3>
-  <audio controls>
-    <source src="audio/setup_A_mix_5dB_babble.wav" type="audio/wav">
-    Your browser does not support the audio element.
-  </audio>
+  <div class="audio-item">
+    <h3>Mixtures</h3>
+    <div class="label-audio">
+      <span>10 dB SNR:</span>
+      <audio controls>
+        <source src="audio/setup_A_mix_10dB_babble.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
 
-  <h2>OverIVA</h2>
+  <div class="audio-item">
+    <h3>Speech</h3>
+    <div class="label-audio">
+      <span>5 dB SNR:</span>
+      <audio controls>
+        <source src="audio/setup_A_mix_5dB_babble.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
 
-  <h3>Source 1</h3>
-  <audio controls>
-    <source src="audio/setup_A_OverIVA_10dB_babble_source1.wav" type="audio/wav">
-    Your browser does not support the audio element.
-  </audio>
+</div>
 
-  <h3>Source 2</h3>
-  <audio controls>
-    <source src="audio/setup_A_OverIVA_10dB_babble_source2.wav" type="audio/wav">
-    Your browser does not support the audio element.
-  </audio>
-
-  
-  
 </body>
 </html>
