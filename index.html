@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
+<style>
     body {
       font-family: Helvetica, Arial, sans-serif;
       text-align: center;
     }
+
     .audio-grid {
       display: flex;
       gap: 40px;
-      align-items: center;  /* vertically align text + players */
+      justify-content: center; 
+      align-items: flex-start;
+      margin-top: 30px;
     }
+
     .audio-item {
       display: flex;
-      flex-direction: column; /* heading above, text + player below */
-    }
-    .label-audio {
-      display: flex;
-      gap: 10px;   /* space between words and player */
+      flex-direction: column;
       align-items: center;
     }
-  </style>
+
+    .audio-item h3 {
+      margin-bottom: 15px;
+    }
+
+    .audio-example {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 5px 0;
+    }
+
+    .audio-example p {
+      margin: 2px 0;
+      font-size: 14px;
+      font-style: italic;
+    }
+</style>
 </head>
 <body>
 
@@ -36,36 +53,37 @@
 
 <img src="images/setup_A.pdf" alt="Setup">
 
-  
-
 <div class="audio-grid">
-
-  <h3>Clean, anechoic sources</h3>
+  
   <div class="audio-item">
-      <h4></h4>
+      <h3>Clean, anechoic sources</h3>     
       <audio controls>
         <source src="audio/setup_A_mix_10dB_babble.wav" type="audio/wav">
         Your browser does not support the audio element.
-      </audio>
-      <h4></h4>
+      </audio>     
+     
       <audio controls>
         <source src="audio/setup_A_mix_5dB_babble.wav" type="audio/wav">
         Your browser does not support the audio element.
       </audio>
   </div>
   
-  <h3>Mixtures</h3>
   <div class="audio-item">
-      <h4>10 dB SNR</h4>
-      <audio controls>
-        <source src="audio/setup_A_clean_source1.wav" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
-      <h4>5 dB SNR</h4>
-      <audio controls>
-        <source src="audio/setup_A_clean_source2.wav" type="audio/wav">
-        Your browser does not support the audio element.
-      </audio>
+      <h3>Mixtures</h3>
+      <div class="audio-example">
+        <p>10 dB SNR</p>
+        <audio controls>
+          <source src="audio/setup_A_clean_source1.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-example">
+        <p>10 dB SNR</p>
+        <audio controls>
+          <source src="audio/setup_A_clean_source2.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
   </div>
 </div>
 
